@@ -21,3 +21,5 @@ class Rental(models.Model):
     return_Date = models.DateTimeField(max_length=100)
 
     
+
+    

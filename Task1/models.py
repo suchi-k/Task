@@ -7,11 +7,15 @@ from django.db import models
 class Author(models.Model):
     name = models.CharField(max_length=100)
     biography = models.TextField()
+    def __str__(self):
+        return self.name
 
 class Book(models.Model):
     title = models.CharField(max_length=100)
     author = models.ForeignKey(Author,on_delete =models.CASCADE)
     publication_year = models.IntegerField()
+    def __str__(self):
+        return self.title
 
 
 class Rental(models.Model):
@@ -19,5 +23,12 @@ class Rental(models.Model):
     renter_name = models.CharField(max_length=100)
     rental_date = models.DateTimeField(max_length=100)
     return_Date = models.DateTimeField(max_length=100)
+    def __str__(self):
+        return self.book
+
+
+
+
+    
 
     

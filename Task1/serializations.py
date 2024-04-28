@@ -1,21 +1,22 @@
 from rest_framework import serializers
-from django.contrib.auth.models import User
-from .models import (Book,Author,Rental)
+from .models import Book,Author,Rental
 
-class BookSerializer(serializers.ModelSerializer):
+class BookSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
 
     class Meta:
         model = Book
-        fields = ('id', 'name', )
+        fields = "__all__"
 
-class AuthorSerializer(serializers.ModelSerializer):
+class AuthorSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
 
     class Meta:
         model = Author
-        fields = ('id', 'name', 'gender', 'age', )
-
-class RentalSerializer(serializers.ModelSerializer):
+        fields = "__all__"
+class RentalSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
+
+    class Meta:
+        fields = "__all__"    
 

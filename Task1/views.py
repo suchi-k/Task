@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.decorators import action, api_view
 from .models import Book,Author,Rental
-from .serializers import BookSerializer,AuthorSerializer,RentalSerializer
+from Task1.serializers import BookSerializer,AuthorSerializer,RentalSerializer
 from django.shortcuts import get_object_or_404
 
 from rest_framework.authentication import (BasicAuthentication, TokenAuthentication,

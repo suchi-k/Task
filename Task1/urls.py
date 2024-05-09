@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import (BookAPIView, BookDetailsAPIView,AuthorAPIView,AuthorDetailsAPIView,AuthorListView
+from .views import (BookAPIView, BookDetailsAPIView,AuthorAPIView,AuthorDetailsAPIView,AuthorListView, RentalAPIView, RentalDetailsAPIView,
                     RentalAPIView,RentalDetailsAPIView)
                     
                     

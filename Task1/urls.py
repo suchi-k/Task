@@ -1,16 +1,14 @@
 from django.urls import path, include
-from .views import (BookAPIView, BookDetailsAPIView, AuthorAPIView, 
-                    AuthorDetailsAPIView, 
+from .views import (BookAPIView, BookDetailsAPIView, 
+                    AuthorAPIView, AuthorDetailsAPIView, 
                     RentalAPIView, RentalDetailsAPIView,
-                    RentalAPIView,RentalDetailsAPIView)
+                    RentalAPIView, RentalDetailsAPIView, 
+                    BookListByAuthor, ReturnBookAPI,
+                    RentalOverDueAPI)
                     
 
 urlpatterns = [
-     # Normal Views
-     # path('book/', book_list, name='book_list'),
-     # path('author/', author_list, name='author_list'),
-     # path('rental/', rental_list, name='rental_list'),
-
+     # Basic CRUD API endpoints
      path('api/author', AuthorAPIView.as_view(), name='author_list_api_view'),   
      path('api/author_detail/<int:id>', AuthorDetailsAPIView.as_view(), name='author_detail_api_view'),
 
@@ -19,4 +17,10 @@ urlpatterns = [
      
      path('api/rental', RentalAPIView.as_view(), name='rental_list_api_view'),   
      path('api/rental_detail/<int:id>', RentalDetailsAPIView.as_view(), name='rental_detail_api_view'),
+
+     # Supporting API endpoints
+     path('api/book_list', BookListByAuthor.as_view(), name='books_by_author'),
+     path('api/book/return', ReturnBookAPI.as_view(), name='return_book'),
+     path('api/rental/overdues', RentalOverDueAPI.as_view(), name='rental_overdue')
+     
 ]

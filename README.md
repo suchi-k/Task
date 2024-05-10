@@ -1,4 +1,5 @@
 # Project Name
+Task 
 
 Short description or overview of the project.
 
@@ -13,15 +14,16 @@ Short description or overview of the project.
 
 ## About
 
-Briefly introduce the project. What problem does it solve? What is its purpose?
+This project i am added unit test cases and once we can develop the code and later we
+can apply the test cases for views and urls .
 
 ## Features
 
 List the key features of the project. What can users accomplish with it?
 
-- Feature 1
+- These project features i wrote some unittestcases ,and i applied rental and i calcuate 14 days how can i calulate we can subtraction  are  rental to return date .
 - Feature 2
-- ...
+- In these project i used python ,django restframework orm queries i implemented curd operations to develop for restful Apis at the endpoints and i create Readme file.
 
 ## Installation
 
